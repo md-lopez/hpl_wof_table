@@ -25,7 +25,6 @@ var padding = {top:20, right:40, bottom:0, left:0},
                     {"label":"Table 13",  "value":13,  "question":"Table 13"},
                     {"label":"Table 14",  "value":14,  "question":"Table 14"},
                     {"label":"Table 15",  "value":15,  "question":"Table 15"},
-                    {"label":"Table 16",  "value":16,  "question":"Table 16"},
                 
  
         ];
@@ -77,7 +76,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
             }
             var  ps       = 360/data.length,
                  pieslice = Math.round(1440/data.length),
-                 rng      = Math.floor((Math.random() * 1440) + 360);
+                 rng      = Math.floor((Math.random() * 7200) + 360);
                 
             rotation = (Math.round(rng / ps) * ps);
             
@@ -91,7 +90,7 @@ var padding = {top:20, right:40, bottom:0, left:0},
             }
             rotation += 90 - Math.round(ps/2);
             vis.transition()
-                .duration(10000)
+                .duration(4000)
                 .attrTween("transform", rotTween)
                 .each("end", function(){
                     //mark question as seen
